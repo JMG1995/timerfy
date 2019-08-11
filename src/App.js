@@ -1,10 +1,10 @@
 import React from "react";
-import Navigation from "./Components/Navigation";
+import Logo from "./Components/Logo";
 
 const App = () => {
 	return (
 		<div>
-			<Navigation />
+			<Logo />
 		</div>
 	);
 };
