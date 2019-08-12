@@ -7,7 +7,7 @@ const Heading = styled.h1`
 	text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
 	transform: rotate(354deg) translate(5px, 1px) skew(-31deg, -6deg);
 	color: #fff;
-	font-size: 6em;
+	font-size: 5em;
 	text-align: center;
 	margin: 0;
 
