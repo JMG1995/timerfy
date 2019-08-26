@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Form = styled.form`
@@ -21,8 +21,9 @@ const Input = styled.input`
 	}
 `;
 
-//  create input as reusuable functional component
+// Create the timer input component
 const GetNumber = props => {
+	const [count, setCount] = useState();
 	return (
 		<Input
 			type="number"
@@ -31,11 +32,18 @@ const GetNumber = props => {
 			min="0"
 			max={props.max}
 			placeholder="00"
+			onChange={e => {
+				// Ensures all numbers are two-digits
+				const val = e.target.value;
+				val < 10 ? setCount(0 + val) : setCount(val);
+			}}
+			value={count}
 		/>
 	);
 };
 
 const TimerDisplay = () => {
+	// Display timer inputs
 	return (
 		<Form>
 			<GetNumber name="hours" max="23" />:
