@@ -1,14 +1,12 @@
 import React from "react";
 import Logo from "./Components/Logo";
-import TimerDisplay from "./Components/TimerDisplay";
-import StartButton from "./Components/StartButton";
+import Timer from "./Components/Timer";
 
 const App = () => {
 	return (
 		<div>
 			<Logo />
-			<TimerDisplay />
-			<StartButton />
+			<Timer />
 		</div>
 	);
 };

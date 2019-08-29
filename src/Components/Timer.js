@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import StartButton from "./StartButton";
 
 const Form = styled.form`
 	margin: 2em auto;
@@ -26,6 +27,7 @@ const GetNumber = props => {
 	const [count, setCount] = useState();
 	return (
 		<Input
+			className="timer"
 			type="number"
 			id={props.name}
 			name={props.name}
@@ -42,15 +44,18 @@ const GetNumber = props => {
 	);
 };
 
-const TimerDisplay = () => {
+const Timer = () => {
 	// Display timer inputs
 	return (
-		<Form>
-			<GetNumber name="hours" max="23" />:
-			<GetNumber name="minutes" max="59" />:
-			<GetNumber name="seconds" max="59" />
-		</Form>
+		<div>
+			<Form>
+				<GetNumber name="hours" max="23" />:
+				<GetNumber name="minutes" max="59" />:
+				<GetNumber name="seconds" max="59" />
+			</Form>
+			<StartButton />
+		</div>
 	);
 };
 
-export default TimerDisplay;
+export default Timer;

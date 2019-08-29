@@ -22,9 +22,9 @@ const Button = styled.a`
 export default function StartButton() {
 	const [text, setText] = useState("Start");
 
-	function toggleStartStop() {
+	const toggleStartStop = () => {
 		setText(text === "Start" ? "Stop" : "Start");
-	}
+	};
 
 	return (
 		<ButtonContainer>
